@@ -12,8 +12,17 @@ if [[ $choice == 'y' ]]; then
 	echo "  Python and Python3 is successfully Installed"
 	echo "-------------------------------------------------"
 fi
-apt install wget
-wget https://archive.org/download/openjdk-9-jre-headless_9.2017.8.20-1_x86_64/openjdk-9-jdk-headless_9.2017.8.20-1_arm.deb
-wget https://archive.org/download/openjdk-9-jre-headless_9.2017.8.20-1_x86_64/openjdk-9-jre-headless_9.2017.8.20-1_arm.deb
-apt-get install -y ./openjdk-9-jdk-headless_9.2017.8.20-1_arm.deb
-apt-get install -y ./openjdk-9-jre-headless_9.2017.8.20-1_arm.deb
+echo " "
+echo "Did you wanna install Java[y/n]?\c"
+read choice1
+if [[ $choice1 == 'y' ]]; then
+	apt install wget
+	wget https://archive.org/download/openjdk-9-jre-headless_9.2017.8.20-1_x86_64/openjdk-9-jdk-headless_9.2017.8.20-1_arm.deb
+	wget https://archive.org/download/openjdk-9-jre-headless_9.2017.8.20-1_x86_64/openjdk-9-jre-headless_9.2017.8.20-1_arm.deb
+	apt-get install -y ./openjdk-9-jdk-headless_9.2017.8.20-1_arm.deb
+	apt-get install -y ./openjdk-9-jre-headless_9.2017.8.20-1_arm.deb
+	echo "-------------------------------------------------"
+	echo "        Java is successfully Installed"
+	echo "-------------------------------------------------"
+fi
+
